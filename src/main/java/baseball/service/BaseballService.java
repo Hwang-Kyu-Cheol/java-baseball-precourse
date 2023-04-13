@@ -12,7 +12,7 @@ public class BaseballService {
      * @param player
      * @return BallStrike
      */
-    public BallStrike findBallAndStrike(List<Integer> computer, List<Integer> player) {
+    public BallStrike findBallStrike(List<Integer> computer, List<Integer> player) {
         int ball = countBall(computer, player);
         int strike = countStrike(computer, player);
         return new BallStrike(ball, strike);

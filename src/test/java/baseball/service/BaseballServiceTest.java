@@ -20,7 +20,7 @@ class BaseballServiceTest {
     void Ball0_Strike3() {
         List<Integer> computer = Arrays.asList(1,2,3);
         List<Integer> player = Arrays.asList(1,2,3);
-        BallStrike result = service.findBallAndStrike(computer, player);
+        BallStrike result = service.findBallStrike(computer, player);
         assertThat(result.getBall()).isEqualTo(0);
         assertThat(result.getStrike()).isEqualTo(3);
     }
@@ -30,7 +30,7 @@ class BaseballServiceTest {
     void Ball2_Strike1() {
         List<Integer> computer = Arrays.asList(3,2,1);
         List<Integer> player = Arrays.asList(1,2,3);
-        BallStrike result = service.findBallAndStrike(computer, player);
+        BallStrike result = service.findBallStrike(computer, player);
         assertThat(result.getBall()).isEqualTo(2);
         assertThat(result.getStrike()).isEqualTo(1);
     }
@@ -40,7 +40,7 @@ class BaseballServiceTest {
     void Ball3_Strike0() {
         List<Integer> computer = Arrays.asList(3,1,2);
         List<Integer> player = Arrays.asList(1,2,3);
-        BallStrike result = service.findBallAndStrike(computer, player);
+        BallStrike result = service.findBallStrike(computer, player);
         assertThat(result.getBall()).isEqualTo(3);
         assertThat(result.getStrike()).isEqualTo(0);
     }
@@ -50,7 +50,7 @@ class BaseballServiceTest {
     void Ball0_Strike0() {
         List<Integer> computer = Arrays.asList(4,5,6);
         List<Integer> player = Arrays.asList(1,2,3);
-        BallStrike result = service.findBallAndStrike(computer, player);
+        BallStrike result = service.findBallStrike(computer, player);
         assertThat(result.getBall()).isEqualTo(0);
         assertThat(result.getStrike()).isEqualTo(0);
     }
