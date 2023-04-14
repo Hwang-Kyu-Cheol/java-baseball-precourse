@@ -2,6 +2,9 @@ package baseball.util;
 
 import baseball.domain.BallStrike;
 
+/**
+ * 부가 기능 : 화면에 출력되는 결과를 만드는 기능
+ */
 public class Output {
 
     public static String enterNumber() {
