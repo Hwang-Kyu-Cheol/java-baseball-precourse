@@ -15,3 +15,6 @@
 * RandomNumberGenerator
   * 컴퓨터 숫자 난수 생성기
   * 조건 : 3자리 숫자이면서, 각 자리 숫자는 모두 다르고 1~9 범위 안
+
+* Resolver
+  * 숫자 또는 문자를 List<Integer> 형식으로 바꿔주는 클래스

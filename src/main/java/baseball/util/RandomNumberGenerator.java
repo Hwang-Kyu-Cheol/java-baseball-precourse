@@ -4,6 +4,10 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 public class RandomNumberGenerator {
 
+    /**
+     * 난수 생성 기능
+     * @return 3자리 숫자이면서, 각 자리 숫자는 모두 다르고 1~9 범위 안의 숫자를 반환
+     */
     public static int generate() {
         while (true) {
             int randomNumber = Randoms.pickNumberInRange(100, 999);
