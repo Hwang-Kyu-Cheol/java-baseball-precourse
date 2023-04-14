@@ -10,3 +10,8 @@
 #### Domain
 * BallStrike
   * 볼 갯수, 스트라이크 갯수 DTO
+
+#### Util
+* RandomNumberGenerator
+  * 컴퓨터 숫자 난수 생성기
+  * 조건 : 3자리 숫자이면서, 각 자리 숫자는 모두 다르고 1~9 범위 안
