@@ -11,12 +11,12 @@ class InputValidatorTest {
 
     @Test
     @DisplayName("3글자이면서 각 문자가 1~9 숫자면 IllegalArgumentException 발생하지 않습니다.")
-    void Fine() {
+    void fine() {
         assertDoesNotThrow(() -> InputValidator.validateBaseballInput("123"));
     }
 
     @Test
-    @DisplayName("3글자가 아닌 경우 IllegalArgumentException 반환합니다.")
+    @DisplayName("3글자가 아닌 경우 IllegalArgumentException 발생합니다.")
     void notThreeLetters() {
         assertThatThrownBy(() -> InputValidator.validateBaseballInput("1234"))
                 .isInstanceOf(IllegalArgumentException.class);
@@ -25,7 +25,7 @@ class InputValidatorTest {
     }
 
     @Test
-    @DisplayName("3글자이지만 각 문자가 1~9가 아닐 경우 IllegalArgumentException 반환합니다.")
+    @DisplayName("3글자이지만 각 문자가 1~9가 아닐 경우 IllegalArgumentException 발생합니다.")
     void notInOneToNine() {
         assertThatThrownBy(() -> InputValidator.validateBaseballInput("120"))
                 .isInstanceOf(IllegalArgumentException.class);
