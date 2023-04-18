@@ -20,10 +20,7 @@ public class Resolver {
     }
 
     public static List<Integer> convertToIntegerList(String input) {
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < input.length(); i++) {
-            list.add(input.charAt(i) - '0');
-        }
-        return list;
+        InputValidator.validateBaseballInput(input);
+        return convertToIntegerList(Integer.parseInt(input));
     }
 }

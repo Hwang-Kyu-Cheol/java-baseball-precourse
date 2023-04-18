@@ -34,9 +34,7 @@ public class BaseballController {
     private void playBaseball(List<Integer> computer) {
         while (true) {
             System.out.print(Output.enterNumber());
-            String input = Console.readLine();
-            InputValidator.validateBaseballInput(input);
-            List<Integer> player = Resolver.convertToIntegerList(input);
+            List<Integer> player = Resolver.convertToIntegerList(Console.readLine());
             BallStrike ballStrike = service.findBallStrike(computer, player);
             System.out.println(Output.displayBallStrike(ballStrike));
             if (ballStrike.isSuccess()) {
