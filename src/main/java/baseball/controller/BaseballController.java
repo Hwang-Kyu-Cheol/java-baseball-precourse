@@ -39,7 +39,7 @@ public class BaseballController {
             List<Integer> player = Resolver.convertToIntegerList(input);
             BallStrike ballStrike = service.findBallStrike(computer, player);
             System.out.println(Output.displayBallStrike(ballStrike));
-            if (ballStrike.getStrike() == 3) {
+            if (ballStrike.isSuccess()) {
                 break;
             }
         }

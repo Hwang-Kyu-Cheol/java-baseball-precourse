@@ -15,7 +15,8 @@ public class BaseballService {
     public BallStrike findBallStrike(List<Integer> computer, List<Integer> player) {
         int ball = countBall(computer, player);
         int strike = countStrike(computer, player);
-        return new BallStrike(ball, strike);
+        boolean isSuccess = (strike == 3) ? true : false;
+        return new BallStrike(ball, strike, isSuccess);
     }
 
     /** 비즈니스 로직 **/
